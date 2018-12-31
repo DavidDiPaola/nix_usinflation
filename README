@@ -1,0 +1,17 @@
+# nix_usinflation
+United States of America Dollar inflation calculator
+
+## usage
+  - convert 100.00USD in 1913 to USD in 2018: `usinflation 1913 100.00 2018`
+  - convert 100.00USD in 2018 to USD in 1913: `usinflation 2018 100.00 1913`
+
+## building and installing
+  - build: `make`
+  - install: `sudo cp usinflation /usr/local/bin/`
+
+## data sources
+the United States Department of Labor's Bureau of Labor Statistics records the Consumer Price Index (CPI) monthly.
+this can be used to generally determine the value of the US Dollar relative to other times.
+specifically, this program uses the `cu.data.1.AllItems` file under the "All Urban Consumers" CPI database which can be found [here](https://www.bls.gov/cpi/data.htm) in "Text File" format.
+the `data_process.py` program takes this file (named `data.txt` in this repo for brevity) and outputs a C array containing the average of the monthly CPI values for each year.
+
