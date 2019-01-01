@@ -29,7 +29,8 @@ main(int argc, char * argv[]) {
 	}
 
 	float ratio = DATA[end_year-DATA_STARTYEAR] / DATA[start_year-DATA_STARTYEAR];
-	printf("%G" "\n", ratio * start_amount);
+	float end_amount = ratio * start_amount;
+	printf("%G" "\n", end_amount);
 	return 0;
 }
 
