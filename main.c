@@ -21,11 +21,11 @@ main(int argc, char * argv[]) {
 
 	if ((start_year < DATA_STARTYEAR) || (start_year > DATA_ENDYEAR)) {
 		fprintf(stderr, "ERROR: start year: %i is invalid. valid years are %i-%i" "\n", start_year, DATA_STARTYEAR, DATA_ENDYEAR);
-		return 5;
+		return 2;
 	}
 	if ((end_year < DATA_STARTYEAR) || (end_year > DATA_ENDYEAR)) {
 		fprintf(stderr, "ERROR: end year: %i is invalid. valid years are %i-%i" "\n", end_year, DATA_STARTYEAR, DATA_ENDYEAR);
-		return 5;
+		return 3;
 	}
 
 	float ratio = DATA[end_year-DATA_STARTYEAR] / DATA[start_year-DATA_STARTYEAR];
